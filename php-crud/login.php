@@ -6,8 +6,8 @@ include "koneksi.php";
 // jika sudah maka jalankan perintah kode di bawah ini
 if(isset($_POST["masuk"])){
     // diambil dari nama form login
-        $us =$_POST["userku"];// nama form userku
-        $ps =$_POST["passku"];// nama form passku
+    $us = addslashes(trim($_POST["userku"]));// nama form userku
+    $ps = addslashes($_POST["passku"]);// nama form passku
         echo "username saya: $us dan sandi saya $ps";
 
         // cocokan hasil inputan dengan tabel user
